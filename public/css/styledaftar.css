@@ -1,0 +1,13 @@
+body{
+	margin:0px;
+}
+
+.daftar{
+	padding: 10px;
+	width: 880px;
+	margin: 0 auto;
+	margin-top: 0;
+	background-color: #00868b;
+	height: 250px;
+	text-align: left;
+}
