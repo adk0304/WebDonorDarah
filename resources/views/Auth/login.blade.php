@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>
-		Portal Palang Merah Indonesia
+		Register
 	</title>
 	<!-- <script src="js/scroll"></script> -->
 	<script type="text/javascript" src="{{ URL::asset('js/scroll.js') }}"></script>
@@ -32,43 +32,34 @@ $(document).ready(function(){
   });
 });
 </script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/stylemaster.css">
 </head>
 <body>
 <div class="navtop" id="navtop_">
 <ul>
   <li><a href="#konten1_">Home</a></li>
   <li><a href="#konten2_">News</a></li>
-  <li><a href="#konten3_">Contact</a></li>
+  <li><a href="#konten3_">Contact</a></li>w
   <li><a href="#login_">Login</a></li>
-	<li><a href="konten">Dbuser</a></li>
 </ul></div>
-	<div class="konten1" id="konten1_">
-<a href="daftar">
-	<img src="{{ URL::to('/img/coba1.jpg') }}"></a>
-
-	</div>
-	<div class="konten2" id="konten2_">
-<img src="{{ URL::to('/img/coba1.jpg') }}">
-
-	</div>
-	<div class="konten3" id="konten3_">
-<img src="{{ URL::to('/img/coba1.jpg') }}">
-
-	</div>
 <div class="login" id="login_">
-<form>
-	<h2> Login </h2>
-		Nama :<input type="text" placeholder="masukan Nama" name="nama">
+<form class="form-login" method="post" action="{{route('login')}}">
+	{{ csrf_field()}}
+			<h2> Login {{config('app.name')}}</h2>
+		email:
+
+		<input type="email" placeholder="masukan email" name="email" id="inputemail" required autofocus>
 		<br>
-		email :<input type="text" placeholder="masukan email" name="email"> <br>
-		<br><button type="submit" class="pesan">Submit</button>
+		password
+		<input type="password" placeholder="masukan pasword" name="password" id="inputpassword" required autofocus> <br>
+		<br><button type="submit" class="btnLogin">Submit</button>
 </form>
-	<h3><a href="regisuser">Mendaftar</a></h3>
+	<h3><a href="regis">Mendaftar</a></h3>
 	</div>
-<div class="footer">
-	<a href="#navtop_">Go To Up</a>
-</div>
+		<div class="footer">
+				<a href="#navtop_">Go To Up</a><br>
+				<center>&copy; Donor Darah PMI </center>
+		</div>
 
 </body>
 </html>

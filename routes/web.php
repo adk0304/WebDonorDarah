@@ -18,12 +18,11 @@ Route::get('/', function () {
 //     return view('pmi/index');
 // });
 Route::get('index', 'ControllerDonor@index');
-Route::get('dbuser', 'ControllerDonor@konten1');
-Route::get('db', 'ControllerDonor@dbuser');
-
-Route::get('/daftar', function () {
-    return view('pmi/daftar');
-});
-Route::get('/master', function () {
-    return view('layout/master');
-});
+//Route::get('home', function(){return Auth::user();})->name('home'); //Siapa yg Login
+Route::get('home', function(){return view('auth/home');})->name('home');
+Route::get('konten', 'ControllerDonor@konten1');
+Route::get('regis', 'AuthController@getRegis')->name('regis');
+Route::post('regis', 'AuthController@postRegis');
+Route::get('login', 'AuthController@getLogin')->name('login');
+Route::post('login', 'AuthController@postlogin');
+Route::post('logout', 'AuthController@logout')->name('logout');

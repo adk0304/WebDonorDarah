@@ -15,4 +15,5 @@ class ControllerDonor extends Controller
     {
       return view('konten/konten1');
     }
+    
 }
