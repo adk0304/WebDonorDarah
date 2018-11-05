@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,10 +8,15 @@ Route::get('/', function () {
 // });
 Route::get('index', 'ControllerDonor@index');
 //Route::get('home', function(){return Auth::user();})->name('home'); //Siapa yg Login
-Route::get('home', function(){return view('auth/home');})->name('home');
+
 Route::get('konten', 'ControllerDonor@konten1');
-Route::get('regis', 'AuthController@getRegis')->name('regis');
-Route::post('regis', 'AuthController@postRegis');
-Route::get('login', 'AuthController@getLogin')->name('login');
-Route::post('login', 'AuthController@postlogin');
-Route::post('logout', 'AuthController@logout')->name('logout');
+Route::get('register', 'AuthController@getRegister')->name('register')->middleware('guest');
+Route::post('register', 'AuthController@postRegister')->middleware('guest');
+Route::get('login', 'AuthController@getLogin')->middleware('guest')->name('login');
+Route::post('login', 'AuthController@postlogin')->middleware('guest');
+Route::get('home', function(){return view('auth/home');})->middleware('auth')->name('home');
+// Route::get('index', function(){return view('pmi/index');})->middleware('auth')->name('index');
+
+Route::get('logout', 'AuthController@logout')->middleware('auth')->name('logout');
+
+Route::get('inputkantong','ControllerDonor@input');

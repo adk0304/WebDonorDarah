@@ -15,5 +15,8 @@ class ControllerDonor extends Controller
     {
       return view('konten/konten1');
     }
-    
+    public function input()
+    {
+      return view('konten/inputkantong');
+    }
 }

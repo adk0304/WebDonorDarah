@@ -19,11 +19,11 @@ class AuthController extends Controller
         }
       return redirect()->route('home');
       }
-    public function getRegis()
+    public function getRegister()
       {
-      return view('auth/regis');
+      return view('auth/register');
       }
-    public function postRegis(Request $request)
+    public function postRegister(Request $request)
     {
       //dd('regis oke');
       $this->validate($request,[
@@ -35,13 +35,13 @@ class AuthController extends Controller
         'name'=>$request->name,
         'email'=>$request->email,
         'password'=>bcrypt($request->password)
+        //bcrypt
       ]);
-      return Redirect()->back();
+      return Redirect()->route('home');
+      }
+      public function logout(){
+        auth::logout();
+        return redirect('index');
       }
 
-    public function logout()
-      {
-          \Auth::logout();
-          return redirect()->route('logout');
-      }
 }

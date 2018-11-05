@@ -28,14 +28,21 @@ li a {
 li a:hover:not(.active) {
     background-color: #111;
 }
-
+.alogin{
+	padding: 2px 30px;
+	width: 840px;
+	margin: 0 auto;
+	margin-top: 0;
+	background-color: #ff6a6a;
+	height: auto;
+}
 
 .konten1{
 	padding: 30px;
 	width: 840px;
 	margin: 0 auto;
 	margin-top: 0;
-	background-color: #1abc9c;
+	background-color: #CD2626;
 	height: 500px;
 }
 .konten2{
@@ -43,7 +50,7 @@ li a:hover:not(.active) {
 	width: 840px;
 	margin: 0 auto;
 	margin-top: 0;
-	background-color: #1abc9c;
+	background-color: #CD2626;
 	height: 500px;
 }
 .konten3{
@@ -51,7 +58,7 @@ li a:hover:not(.active) {
 	width: 840px;
 	margin: 0 auto;
 	margin-top: 0;
-	background-color: #1abc9c;
+	background-color: #CD2626;
 	height: 500px;
 }
 .login{
@@ -69,6 +76,6 @@ li a:hover:not(.active) {
 	width: 840px;
 	margin: 0 auto;
 	margin-top: 0;
-	background-color: red;
+	background-color: #4f4f4f;
 	height: 30px;
 }

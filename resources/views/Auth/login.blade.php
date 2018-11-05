@@ -54,12 +54,11 @@ $(document).ready(function(){
 		<input type="password" placeholder="masukan pasword" name="password" id="inputpassword" required autofocus> <br>
 		<br><button type="submit" class="btnLogin">Submit</button>
 </form>
-	<h3><a href="regis">Mendaftar</a></h3>
+	<h3><a href="register">Mendaftar</a></h3>
 	</div>
 		<div class="footer">
 				<a href="#navtop_">Go To Up</a><br>
 				<center>&copy; Donor Darah PMI </center>
 		</div>
-
 </body>
 </html>

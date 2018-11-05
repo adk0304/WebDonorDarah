@@ -37,7 +37,7 @@ $(document).ready(function(){
 <body>
 <div class="navtop" id="navtop_">
 <ul>
-  <li><a href="#konten1_">Home</a></li>
+  <li><a href="index">Home</a></li>
   <li><a href="#konten2_">News</a></li>
   <li><a href="#konten3_">Contact</a></li>
   <li><a href="#login_">Login</a></li>
